@@ -98,7 +98,7 @@ export default function Home() {
   return (
     <>
       <h1>Home Page</h1>
-      <ul className="grid grid-cols-3 gap-8">
+      <ul className="grid lg:grid-cols-3 gap-8 p-2 sm:grid-cols-1 md:grid-cols-2">
         {mockVide.map((video) => <li key={video.id} ><VideoCard {...video} /></li>)}
       </ul>
     </>

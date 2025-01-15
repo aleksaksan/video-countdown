@@ -44,7 +44,7 @@ export function VideoCard ({id, title, src, poster} : {
   return (
     <Link
       href={`${id}`}
-      className='relative group whitespace-nowrap text-ellipsis overflow-hidden block font-medium'
+      className='relative group whitespace-nowrap text-ellipsis overflow-hidden block font-medium rounded-md'
       draggable="false"  
     >
       <video
@@ -59,7 +59,7 @@ export function VideoCard ({id, title, src, poster} : {
         onMouseLeave={stopVideo}
         onTouchEnd={stopVideo}
         ></video>
-        <div className="controls relative bottom-6 leading-[0]">
+        <div className="controls relative bottom-3 leading-[0]">
           <input
             type="range"
             min="0"
