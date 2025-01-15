@@ -1,16 +1,6 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Video countdown",
@@ -24,10 +14,22 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+      <body>
+        <header>
+          <nav>
+            <ul>
+              <li>
+                <Link prefetch={false} href="/">Home Page</Link>
+              </li>
+              <li>
+                <Link prefetch={false} href="/countdown">Countdown Page</Link>
+              </li>
+            </ul>
+          </nav>
+        </header>
+        <main className="mx-auto h-full flex items-center flex-col container">
+          {children}
+        </main>
       </body>
     </html>
   );

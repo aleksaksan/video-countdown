@@ -1,21 +1,107 @@
-import Link from "next/link";
+import { VideoCard } from "@/components/VideoCard";
 
+const mockVide = [
+  {
+    id: 1,
+    title: "Shrek",
+    src: "/Shrek - All star _ Intro HD (1080p).mp4",
+    poster: ""
+  },
+  {
+    id: 2,
+    title: "Shrek - All star _ Intro HD (1080p).mp4 Shrek - All star _ Intro HD (1080p).mp4 Shrek - All star _ Intro HD (1080p).mp4",
+    src: "/Shrek - All star _ Intro HD (1080p).mp4",
+    poster: ""
+  },
+  {
+    id: 3,
+    title: "Shrek",
+    src: "/Shrek - All star _ Intro HD (1080p).mp4",
+    poster: ""
+  },
+  {
+    id: 4,
+    title: "Shrek",
+    src: "/Shrek - All star _ Intro HD (1080p).mp4",
+    poster: ""
+  },
+  {
+    id: 5,
+    title: "Shrek",
+    src: "/Shrek - All star _ Intro HD (1080p).mp4",
+    poster: ""
+  },
+  {
+    id: 6,
+    title: "Shrek",
+    src: "/Shrek - All star _ Intro HD (1080p).mp4",
+    poster: ""
+  },
+  {
+    id: 7,
+    title: "Shrek",
+    src: "/Shrek - All star _ Intro HD (1080p).mp4",
+    poster: ""
+  },
+  {
+    id: 8,
+    title: "Shrek",
+    src: "/Shrek - All star _ Intro HD (1080p).mp4",
+    poster: ""
+  },
+  {
+    id: 9,
+    title: "Shrek",
+    src: "/Shrek - All star _ Intro HD (1080p).mp4",
+    poster: ""
+  },
+  {
+    id: 10,
+    title: "Shrek",
+    src: "/Shrek - All star _ Intro HD (1080p).mp4",
+    poster: ""
+  },
+  {
+    id: 11,
+    title: "Shrek",
+    src: "/Shrek - All star _ Intro HD (1080p).mp4",
+    poster: ""
+  },
+  {
+    id: 12,
+    title: "Shrek",
+    src: "/Shrek - All star _ Intro HD (1080p).mp4",
+    poster: ""
+  },
+  {
+    id: 13,
+    title: "Shrek",
+    src: "/Shrek - All star _ Intro HD (1080p).mp4",
+    poster: ""
+  },
+  {
+    id: 14,
+    title: "Shrek",
+    src: "/Shrek - All star _ Intro HD (1080p).mp4",
+    poster: ""
+  },
+  {
+    id: 15,
+    title: "Shrek",
+    src: "/Shrek - All star _ Intro HD (1080p).mp4",
+    poster: ""
+  },
+
+]
 
 export default function Home() {
   return (
-    <main className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <nav>
-        <ul>
-          <li>
-            <Link prefetch={false} href="/server-only-component">/server-only-component</Link>
-          </li>
-          
-        </ul>
-      </nav>
+    <>
       <h1>Home Page</h1>
-      <div className="flex flex-col gap-8 row-start-2 sm:items-start bg-white">
-       hello
-      </div>
-    </main>
+      <ul className="grid grid-cols-3 gap-8">
+        {mockVide.map((video) => <li key={video.id} ><VideoCard {...video} /></li>)}
+      </ul>
+    </>
+      
   );
 }
